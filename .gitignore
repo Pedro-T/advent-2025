@@ -1,0 +1,40 @@
+# Visual Studio Code
+.vscode/
+
+# C# Projects
+bin/
+obj/
+*.user
+*.suo
+*.userosx
+*.userprefs
+*.csproj.user
+
+# Build outputs
+bin/
+obj/
+
+# NuGet
+nuget/
+
+# User-specific
+*.vsix
+*.vsixmanifest
+
+# Temporary files
+*~
+*.tmp
+*.log
+*.swp
+*.swo
+*.swn
+*.swnl
+*.bak
+*.old
+*.orig
+*.backup
+*.tmp
+*.lock
+*.pid
+*.pid.lock
+*.lock文件
