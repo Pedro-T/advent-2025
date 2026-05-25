@@ -1,6 +1,9 @@
 # Visual Studio Code
 .vscode/
 
+# advent inputs
+input.txt
+
 # C# Projects
 bin/
 obj/
