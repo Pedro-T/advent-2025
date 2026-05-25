@@ -15,19 +15,32 @@
             for (long i = start; i <= end; i++)
             {
                 string text = i.ToString();
-                if (text.Length % 2 != 0)
+                long len = text.Length;
+                for (int j = 1; j <= len / 2; j++)
                 {
-                    continue;
-                }
-
-                if (text[..(text.Length/2)].Equals(text[(text.Length/2)..]))
-                {
-                    sum += i;
+                    bool flag = true;
+                    if (len % j != 0)
+                    {
+                        flag = false;
+                        continue; // skip as the number length is not a multiple of j cleanly
+                    }
+                    string seq = text[0..j];
+                    for (int k = j; k < len; k += j)
+                    {
+                        if (!text[k..(k+j)].Equals(seq))
+                        {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                        sum += i;
+                        break;
+                    }
                 }
             }
         }
         Console.WriteLine(sum);
-
-
     }
 }
